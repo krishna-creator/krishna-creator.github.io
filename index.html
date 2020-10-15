@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Sigmar One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Rammetto One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Source Code Pro' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>food</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #loading{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+            display: block;
+            background: #000;
+            z-index: 99;
+            text-align: center;
+        }
+        #loadingpic{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 100;
+            color: #fff;
+            font-size:4em;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+        #screen{
+            width: 100%;
+            overflow: hidden;
+        }
+        #container{
+            display: flex;
+            flex-wrap: nowrap;
+            height: 100vh;
+            width: 100%;
+            animation: moving 7s linear 1s infinite;
+        }
+        @keyframes moving {
+            23%{
+                transform: translateX(0);
+            }
+            33%{
+                transform: translateX(-100%);
+            }
+            56%{
+                transform: translateX(-100%);
+            }
+            66%{
+                transform: translateX(-200%);
+            }
+            95%{
+                transform: translateX(-200%);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+        #screen1{
+            position: relative;
+            background:url('https://www.dropbox.com/s/66msdxi4me06lan/cover1.jpg?raw=1');
+            min-width: 100%;
+            height: 70%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            color:#FC427B;
+            font-size: 5vh;
+            text-align: center;
+            
+        }
+        #screen2{
+            position: relative;
+            background:url('https://www.dropbox.com/s/w25cjaaxdl0tb0h/cover4.jpg?raw=1');
+            min-width: 100%;
+            height: 70%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            color:#4cd137;
+            font-size: 5vh;
+            text-align: center;
+            
+        }
+        #screen3{
+            position: relative;
+            background: url('https://www.dropbox.com/s/9k9plvxenx90cpa/cover3.jpg?raw=1');
+            width: 100%;
+            min-width: 100%;
+            height: 70%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            color: #fff200;
+            font-size: 5vh;
+            text-align: center;
+            
+        }
+        #label{
+            position: fixed;
+            height: 30%;
+            width: 100%;
+            bottom: 0;
+            background: #b33939;
+            color: white;
+            text-align: center;
+            padding-top: 5px;
+        }
+        #logo1{
+            color: #2c2c54;
+            font-size: 7vh;
+            position: absolute;
+            left: -30%;
+            animation: left 2s cubic-bezier(0.16, 0.24, 0.7, 1.3) 1s forwards;
+            font-family: Sigmar One;
+        }
+        @keyframes left {
+            50%{
+                left: -30%;
+            }
+            100%{
+                left: 50%;
+                transform: translateX(-110%);
+            }
+        }
+        #logo2{
+            color: #2c2c54;
+            font-size: 7vh;
+            position: absolute;
+            right: -30%;
+            animation: right 2s cubic-bezier(0.16, 0.24, 0.7, 1.3) 1s forwards;
+            font-family: Sigmar One;
+        }
+        @keyframes right {
+            50%{
+                right: -30%;
+            }
+            100%{
+                right: 50%;
+                transform: translateX(110%);
+            }
+        }
+        #enter{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 13vh;
+            height: 5vh;
+            background:#CAD3C8;
+            color:#2c2c54;
+            font-size: 4vh;
+            border-radius: 4px;
+            border: none;
+            animation: vis 3s ease forwards;
+            opacity: 0;
+        }
+        @keyframes vis {
+            80%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        #main{
+            width: 100%;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            overflow-y: hidden;
+        }
+        #sub{
+            height: 100vh;
+            width: 600%;
+            background: #bdc3c7;
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            height: 15%;
+            background:#b33939;
+            font-size: 5vh;
+            text-align: center;
+            color:  #2c2c54;
+            padding-top: 20px;
+            font-family: 'Rammetto One';
+        }
+        header span:nth-child(odd){
+            animation: low 2s linear infinite;
+        }
+        header span:nth-child(even){
+            animation: upp 2s linear infinite;
+        }
+        @keyframes low {
+            100%{
+                text-transform: lowercase;
+            }
+        }
+        @keyframes upp {
+            100%{
+                text-transform: uppercase;
+            }
+        }
+        #block{
+            position: fixed;
+            font-size: 4vh;
+            right: 5px;
+            top: 30px;
+            color: #ddd;
+        }
+        nav{
+            position: fixed;
+            width: 25px;
+            height: 4px;
+            background: #ddd;
+            left: 5px;
+            top: 35px;
+            border-radius: 2px;
+        }
+        nav::after{
+            content: '';
+            width: 25px;
+            height: 4px;
+            background: #ddd;
+            position: absolute;
+            top: 7px;
+            border-radius: 2px;
+        }
+        nav::before{
+            content: '';
+            width: 25px;
+            height: 4px;
+            background: #ddd;
+            position: absolute;
+            top: 14px;
+            border-radius: 2px;
+        }
+        ul{
+            position: fixed;
+            top: 18px;
+            left: 0;
+            transform:translateX(-100%);
+            background: #ddd;
+            width: 50%;
+            max-width: 200px;
+            height: 100%;
+            list-style-type: none;
+            padding: 0;
+            transition: transform 1s ease;
+            box-shadow: inset 0 0 3px #000;
+            border-radius: 1px;
+            z-index: 1;
+        }
+        li{
+            margin: 20px;
+            font-size: 4vh;
+            color:  #2c2c54;
+        }
+        #x{
+            position: absolute;
+            right: 15px;
+            top: 5px;
+            width: 3px;
+            height: 20px;
+            border-radius: 2px;
+            background: red;
+            transform: rotate(45deg);
+        }
+        #x::after{
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 20px;
+            border-radius: 2px;
+            background: #f00;
+            transform: rotate(275deg);
+        }
+        .menu{
+            background:#ddd;
+            position: absolute;
+            width: 80%;
+            max-width: 400px;
+            height: 60%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #333;
+            
+        }
+        #item1{
+            top: 20%;
+            left:50%;
+            transform: translate(-50%);
+        }
+        #item2{
+            top: 20%;
+            left: 150%;
+            transform: translate(-50%);
+        }
+        #item3{
+            top: 20%;
+            left: 250%;
+            transform: translate(-50%);
+        }
+        #item4{
+            top: 20%;
+            left: 350%;
+            transform: translate(-50%);
+        }
+        #item5{
+            top: 20%;
+            left: 450%;
+            transform: translate(-50%);
+        }
+        #item6{
+            top: 20%;
+            left: 550%;
+            transform: translate(-50%);
+        }
+        #pd{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 5%;
+            background: hsl(212, 17%, 69%);
+            font-size: 4vh;
+            color: #2c2c54;
+            text-align: center;
+
+        }
+        .menu1{
+            position: absolute;
+            width: 100%;
+            height: 70%;
+            border-radius: 10px 10px 0 0;
+        }
+        .name{
+            position: absolute;
+            top: 72%;
+            width: 100%;
+            text-align: center;
+            color:#1e272e;
+            font-size: 4vh;
+            font-family: 'Source Code Pro';
+            font-weight: bolder;
+        }
+        .price{
+            position: absolute;
+            bottom: 5%;
+            left: 0;
+            width: 90%;
+            font-size: 3vh;
+            text-align: center;
+            color: #6F1E51;
+        }
+        .veg{
+            position: absolute;
+            bottom: 5%;
+            left: 10%;
+            color:#1e272e;
+            background: #009432;
+            font-size: 3vh;
+            padding: 3px 10px;
+            border-radius: 4px;
+        }
+        .nonveg{
+            position: absolute;
+            bottom: 5%;
+            left: 2%;
+            color:#1e272e;
+            background: #EA2027;
+            font-size: 3vh;
+            padding: 3px 5px;
+            border-radius: 4px;
+        }
+        .order{
+            position: absolute;
+            right: 1%;
+            background: #cd6133;
+            border-radius: 5px;
+            border: none;
+            bottom: 7%;
+            font-size: 4.4vh;
+            color: #2c2c54;
+            font-family: 'Source Code Pro';
+            font-weight: bold;
+        }
+        #submit{
+            position: fixed;
+            bottom: 9%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: none;
+            border-radius: 5px;
+            font-size: 4.5vh;
+            font-family: 'Source Code Pro';
+            font-weight: bolder;
+            color: #2c2c54;
+            background: #2980b9;
+        }
+        #summary{
+            position: absolute;
+            width: 100%;
+            background:#bdc3c7 ;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index:-1;
+        }
+        #de{
+            position: absolute;
+            width: 80%;
+            height: 60%;
+            background: #ddd;
+            top: 20%;
+            left: 10%;
+            text-align: center;
+            font-size: 4vh;
+            box-shadow: 0 0 5px #555;
+            color:  #2c2c54;
+        }
+        #back{
+            position: fixed;
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: none;
+            border-radius: 5px;
+            font-size: 4.5vh;
+            font-family: 'Source Code Pro';
+            font-weight: bolder;
+            color: #2c2c54;
+            background: #2980b9;
+        }
+    </style>
+    <script>
+        var main,screen,u,n;
+        var a=[];
+        window.onload=function(){
+            var enter=document.getElementById('enter');
+            main=document.getElementById('main');
+            screen=document.getElementById('screen');
+            var x=document.getElementById('x');
+            n=document.getElementById('n');
+            u=document.getElementById('u');
+            enter.addEventListener('click',function(){
+                main.style.visibility="visible";
+                screen.style.visibility="hidden";
+            });
+            n.addEventListener('click',function(){
+                u.style.transform="translateX(0)";
+            });
+            x.addEventListener('click',function(){
+                u.style.transform="translateX(-100%)";
+            });
+        };
+        function rev(){
+            main.style.visibility="hidden";
+            screen.style.visibility="visible";
+            u.style.transform="translateX(-100%)";
+        }
+        function bill(x,y){
+            var price=document.getElementById("price");
+            var total=price.innerHTML;
+            if(total>=x){
+                total=total-x;
+                a.push(y+'- 1');
+                alert("successfully ordered")
+            }
+            else{
+                alert("not enough money,add money");
+            }
+            price.innerHTML=total;
+        }
+        function finish(){
+            var summary=document.getElementById("summary");
+            var text;
+            var sub=document.getElementById("sub");
+            document.getElementById('pd').style.visibility="hidden";
+            document.getElementById('submit').style.visibility="hidden";
+            n.style.visibility="hidden";
+            summary.style.visibility="visible";
+            sub.style.visibility="hidden";
+            if(a.length>0){
+            text="<h5>Order Details</h5>"+a.join('<br>')+"<br><br>Delivery in less than 1hr.<br>Have a nice day.<br>";
+            }
+            else{
+                text="please order any item";
+            }
+            document.getElementById("de").innerHTML=text;
+        }
+        function goback(){
+
+        }
+    </script>
+</head>
+<body>
+    <div id="loading">
+        <div id="loadingpic">loading...</div>
+    </div>
+    <div id="screen">
+        <div id="container">
+            <div id="screen1">Choose Your Favorite Food</div>
+            <div id="screen2">Taste All Varities</div>
+            <div id="screen3">Door Delivery</div>
+        </div>
+        <div id="label">
+            <h2>WELCOME TO <br><span id="logo1">YuM</span><span id="logo2">yUm</span><br><br> order your food</h2>
+            <button id="enter">Enter</button>
+        </div>
+    </div>
+    <div id="main">
+        <header><span>Y</span><span>u</span><span>M </span><span>y</span><span>U</span><span>m</span></header>
+        <nav id="n"></nav>
+        <ul id="u">
+            <li onclick="rev()">Home</li>
+            <li>Service</li>
+            <li>Add Money</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Follow Me</li>
+            <span id="x"></span>
+        </ul>
+        <div id="block">$<span id="price">500</span></div>
+        <div id="sub">
+            <div class="menu"id="item1"><img src="https://www.dropbox.com/s/sgvgiwkpyirk0zl/item1.jpg?raw=1"class="menu1" alt=""><span class="nonveg">Non-Veg</span><span class="name">Chicken 65</span><span class="price">Price:$170</span><button class="order"onclick="bill(170,'Chicken 65')">Order</button></div>
+            <div class="menu"id="item2"><img src="https://www.dropbox.com/s/vtmhwceb3dva389/item2.jpg?raw=1"alt=""class="menu1"><span class="veg">Veg</span><span class="name">Hot Pizza</span><span class="price">Price:$250</span><button class="order"onclick="bill(250,'Hot Pizza')">Order</button></div>
+            <div class="menu"id="item3"><img src="https://www.dropbox.com/s/igclexh5l9kbm0s/item3.jpg?raw=1"class="menu1"alt=""><span class="veg">Veg</span><span class="name">Burger</span><span class="price">Price:$140</span><button class="order"onclick="bill(140,'Burger')">Order</button></div>
+            <div class="menu"id="item4"><img src="https://www.dropbox.com/s/78r8ajaj0k2y053/item4.jpg?raw=1"class="menu1"alt=""><span class="nonveg">Non-Veg</span><span class="name">Fish Fry</span><span class="price">Price:$220</span><button class="order"onclick="bill(220,'Fish Fry')">Order</button></div>
+            <div class="menu"id="item5"><img src="https://www.dropbox.com/s/lxgbk6lfari2z3a/item51.jpg?raw=1"class="menu1"alt=""><span class="veg">Veg</span><span class="name">Choclate Shake</span><span class="price">Price:$100</span><button class="order"onclick="bill(100,'Choclate Shake')">Order</button></div>
+            <div class="menu"id="item6"><img src="https://www.dropbox.com/s/lehxv5x8eh11npz/item6.jpg?raw=1"class="menu1"alt=""><span class="veg">Veg</span><span class="name">Donots</span><span class="price">Price:$80</span><button class="order"onclick="bill(80,'Donots')">Order</button></div>
+            </div>
+            <button id="submit"onclick="finish()">Finish</button>
+            <div id="pd">Page 1/6</div>
+    </div>
+    <div id="summary">
+        <div id="de"></div>
+        
+    </div>
+    <script>
+        $(window).on('load',function(){
+            $('#loading').hide();
+        });
+    </script>
+</body>
+</html>
