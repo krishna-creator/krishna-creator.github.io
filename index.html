@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/00acf4edec.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loader">
+      <div id="loaderimg">Loading...</div>
+    </div>
+    <div id="home">
+      <div id="content">
+        Hello, I am<br />
+        Krishna Vamsi<br />
+        <div id="status">
+          <span>A Full Stack Developer</span>
+          <span>A UI Designer</span>
+          <span>A Interactive Designer</span>
+          <span>A Creative Guy</span>
+          <span>A Full Stack Developer</span>
+        </div>
+      </div>
+    </div>
+    <nav id="a">
+      <div class="logo">PortFolio</div>
+      <div id="m" class="close"></div>
+      <ul id="u">
+        <li class="close"><a href="#home">Home</a></li>
+        <li class="close"><a href="#about">About</a></li>
+        <li class="close"><a href="#skills">Skills</a></li>
+        <li class="close"><a href="#projects">Projects</a></li>
+        <li class="close"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="temp"></div>
+    <div id="about">
+      <header class="head">ABOUT ME</header>
+      <p id="details">
+        <img id="profile" src="images/vamsi.jpeg" alt="" />
+        Hello!, My name is Krishna Vamsi and my portfolio is a representation of
+        all that I've learned and accomplished as a computer science student.<br />
+        I love designing websites and learning new things, am looking for more
+        opportunities to work as a full stack developer.My mission is to bring
+        more creativity and good ideas into the world. I enjoy the challenge of
+        working with different types of people and coming up with solutions to
+        difficult problems. It helps that I have a knack for staying calm during
+        a storm!<br />
+        Currently studying at VelTech University, chennai. Looking for a fresher
+        job where I can show off my skills.
+      </p>
+    </div>
+    <div id="skills">
+      <header class="head">SKILLS</header>
+      <div id="flex">
+        <div class="icon" data-aos="fade-right">
+          <img
+            class="icons"
+            src="https://img.icons8.com/color/144/000000/html-5.png"
+          /><progress value="100" max="100"></progress>
+        </div>
+        <div class="icon" data-aos="fade-left">
+          <img
+            class="icons"
+            src="https://img.icons8.com/color/144/000000/css3.png"
+          /><progress value="100" max="100"></progress>
+        </div>
+        <div class="icon" data-aos="fade-right">
+          <img
+            class="icons"
+            src="https://img.icons8.com/color/144/000000/javascript.png"
+          /><progress value="100" max="100"></progress>
+        </div>
+        <div class="icon" data-aos="fade-left">
+          <img
+            class="icons"
+            src="https://img.icons8.com/color/144/000000/python.png"
+          /><progress value="85" max="100"></progress>
+        </div>
+        <div class="icon" data-aos="fade-right">
+          <img
+            class="icons"
+            src="https://img.icons8.com/officel/144/000000/php-logo.png"
+          /><progress value="75" max="100"></progress>
+        </div>
+        <div class="icon" data-aos="fade-left">
+          <img
+            class="icons"
+            src="https://img.icons8.com/bubbles/144/000000/react.png"
+          /><progress value="85" max="100"></progress>
+        </div>
+        <div class="icon" data-aos="fade-right">
+          <img
+            class="icons"
+            src="https://img.icons8.com/color/144/000000/nodejs.png"
+          /><progress value="85" max="100"></progress>
+        </div>
+        <div class="icon" data-aos="fade-left">
+          <img
+            class="icons"
+            src="https://img.icons8.com/color/144/000000/mongodb.png"
+          /><progress value="80" max="100"></progress>
+        </div>
+      </div>
+    </div>
+    <div id="projects">
+      <header class="head">PROJECTS</header>
+      <div id="pp">
+        <div class="container" data-aos="flip-left">
+          <img src="images/blood.png" class="p" alt="" /><span class="hover"
+            >Online Blood Bank</span
+          >
+        </div>
+        <div class="container" data-aos="zoom-in">
+          <img
+            src="https://www.dropbox.com/s/cylnu1zd65wdsp6/mountains.jpeg?raw=1"
+            class="p"
+            alt=""
+          /><span class="hover">Music Player</span>
+        </div>
+        <div class="container" data-aos="zoom-in">
+          <img
+            src="https://www.dropbox.com/s/elzd2yb6pjh9zru/owl.jpeg?raw=1"
+            class="p"
+            alt=""
+          /><span class="hover">Coffee Maker clone</span>
+        </div>
+        <div class="container" data-aos="flip-right">
+          <img
+            src="https://www.dropbox.com/s/y5ss4dt8nn3uqqw/music%20player.jpeg?raw=1"
+            class="p"
+            alt=""
+          /><span class="hover">Mountains clone</span>
+        </div>
+        <div class="container" data-aos="flip-left">
+          <img
+            src="https://www.dropbox.com/s/t6yzxwmxhfq3yza/coffee.jpeg?raw=1"
+            class="p"
+            alt=""
+          /><span class="hover">Owl clone</span>
+        </div>
+        <div class="container" data-aos="flip-right">
+          <img src="images/random.png" class="p" alt="" /><span class="hover"
+            >Random XKCD</span
+          >
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <header class="head">Contact Me</header>
+      <div id="f">
+        <form onsubmit="norefresh(); return false;">
+          <label for="name">Name :</label>
+          <input
+            name="name"
+            class="input-control"
+            type="text"
+            placeholder="Name"
+          /><br />
+          <label for="email">Email :</label>
+          <input
+            name="email"
+            class="input-control"
+            type="email"
+            placeholder="Email"
+          /><br />
+          <label for="subject">Subject :</label>
+          <input
+            class="input-control"
+            type="text"
+            placeholder="subject"
+            name="Subject"
+          /><br />
+          <textarea
+            class="input-control"
+            name="msg"
+            id="msg"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+          <input type="submit" value="submit" class="btn" /><br />
+          <div style="text-align: center">
+            <span style="font-size: 1.3em">Get In Touch</span>
+            <div style="margin-top: 1em">
+              <img src="https://img.icons8.com/color/48/000000/whatsapp.png" />
+              <img
+                src="https://img.icons8.com/color/48/000000/facebook-new.png"
+              />
+              <img src="https://img.icons8.com/color/48/000000/twitter.png" />
+              <img
+                src="https://img.icons8.com/ios-filled/48/000000/github.png"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      $(window).on("load", function () {
+        $("#loader").hide();
+        $(".close").click(function () {
+          $("#u").toggleClass("over");
+        });
+      });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
