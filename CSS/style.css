@@ -136,6 +136,7 @@ canvas:hover {
   gap: 20px;
   /* background-color: #121212; Background color for the container */
   border-radius: 8px;
+  margin-top: 8rem !important;
 }
 
 .skills-category {
@@ -143,7 +144,7 @@ canvas:hover {
   align-items: center;
   gap: 2rem;
   flex: 0 0 auto; /* Prevents the skills categories from shrinking or growing */
-  background-color: #6f2dbd; /* Color similar to the provided image */
+  background-color: #f9f9f9; /* Color similar to the provided image */
   border-radius: 8px;
   padding: 15px;
   min-width: 300px; /* Minimum width for each category for consistency */
@@ -152,7 +153,6 @@ canvas:hover {
 }
 
 .skills-category h3 {
-  color: #ffffff;
   text-align: center;
   margin-bottom: 15px;
   font-weight: bold;
@@ -168,8 +168,9 @@ canvas:hover {
 }
 
 .skills-content span {
-  background-color: #ffffff; /* Skill item background */
-  color: #6f2dbd; /* Skill item text color */
+  background-color: rgb(188 87 36); /* Skill item background */
+  /* color: #6f2dbd; Skill item text color */
+  color: #f9f9f9;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 14px;
@@ -180,8 +181,8 @@ canvas:hover {
 }
 
 .skills-content span:hover {
-  background-color: #6f2dbd;
-  color: #ffffff;
+  background-color: #fff;
+  color: #000;
   cursor: pointer;
 }
 
