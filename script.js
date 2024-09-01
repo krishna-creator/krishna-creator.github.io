@@ -81,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   const ctx = document.getElementById("skillsChart").getContext("2d");
 
-  // Radar chart configuration
   const config = {
     type: "radar",
     data: {
@@ -97,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
       datasets: [
         {
           label: "Skill Level",
-          data: [90, 85, 80, 75, 70, 65, 60],
+          data: [92, 90, 80, 88, 80, 75, 85],
           backgroundColor: "rgba(54, 162, 235, 0.2)",
           borderColor: "rgba(54, 162, 235, 1)",
           borderWidth: 2,
@@ -138,27 +137,36 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         },
       },
-      tooltips: {
-        enabled: true,
-        callbacks: {
-          label: function (tooltipItem, data) {
-            const label = data.labels[tooltipItem.index];
-            const value =
-              data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
-            return `${label}: ${value}% proficiency`;
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: function (tooltipItem) {
+              const label = tooltipItem.label;
+              const value = tooltipItem.raw;
+              return `${label}: ${value}% proficiency`;
+            },
           },
         },
       },
-      scale: {
-        ticks: {
-          beginAtZero: true,
-          max: 100,
-          stepSize: 20,
-          showLabelBackdrop: false,
-        },
-        pointLabels: {
-          fontSize: 14,
-          fontColor: "#495057",
+      scales: {
+        r: {
+          // For Chart.js v3.x, the scale configuration might be under 'scales' instead of 'scale'
+          ticks: {
+            beginAtZero: true,
+            max: 100,
+            stepSize: 20,
+            backdropColor: false,
+            color: "#495057",
+            font: {
+              size: 14,
+            },
+          },
+          pointLabels: {
+            color: "#495057",
+            font: {
+              size: 18,
+            },
+          },
         },
       },
       responsive: true,
