@@ -17,7 +17,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   text-align: center;
-  margin: 8rem auto;
+  margin: 5rem auto 0 auto;
 }
 
 h1 {
@@ -91,4 +91,19 @@ h1 {
   color: #d32f2f;
   margin-bottom: 1em;
   font-weight: bold;
+}
+.social-links {
+  text-align: center; /* Center the icons horizontally */
+  margin-top: 20px; /* Space above the social links */
+}
+
+.social-link {
+  display: inline-block; /* Display icons in a row */
+  margin: 0 15px; /* Space between icons */
+  font-size: 2rem; /* Adjust icon size */
+  text-decoration: none; /* Remove underline */
+}
+
+.social-link:hover {
+  color: #0056b3; /* Darker color on hover */
 }
