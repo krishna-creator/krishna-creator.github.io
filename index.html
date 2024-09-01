@@ -3,220 +3,330 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/00acf4edec.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Krishna Vamsi Dhulipalla - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- Animate.css for animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- AOS Library for scroll animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/about.css" />
+    <link rel="stylesheet" href="CSS/products.css" />
   </head>
   <body>
-    <div id="loader">
-      <div id="loaderimg">Loading...</div>
-    </div>
-    <div id="home">
-      <div id="content">
-        Hello, I am<br />
-        Krishna Vamsi<br />
-        <div id="status">
-          <span>A Full Stack Developer</span>
-          <span>A UI Designer</span>
-          <span>A Interactive Designer</span>
-          <span>A Creative Guy</span>
-          <span>A Full Stack Developer</span>
-        </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">KVD</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="experience.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <nav id="a">
-      <div class="logo">PortFolio</div>
-      <div id="m" class="close"></div>
-      <ul id="u">
-        <li class="close"><a href="#home">Home</a></li>
-        <li class="close"><a href="#about">About</a></li>
-        <li class="close"><a href="#skills">Skills</a></li>
-        <li class="close"><a href="#projects">Projects</a></li>
-        <li class="close"><a href="#contact">Contact</a></li>
-      </ul>
     </nav>
-    <div id="temp"></div>
-    <div id="about">
-      <header class="head">ABOUT ME</header>
-      <p id="details">
-        <img id="profile" src="images/vamsi.jpeg" alt="" />
-        Hello!, My name is Krishna Vamsi and my portfolio is a representation of
-        all that I've learned and accomplished as a computer science student.<br />
-        I love designing websites and learning new things, am looking for more
-        opportunities to work as a full stack developer.My mission is to bring
-        more creativity and good ideas into the world. I enjoy the challenge of
-        working with different types of people and coming up with solutions to
-        difficult problems. It helps that I have a knack for staying calm during
-        a storm!<br />
-        Currently studying at VelTech University, chennai. Looking for a fresher
-        job where I can show off my skills.
-      </p>
-    </div>
-    <div id="skills">
-      <header class="head">SKILLS</header>
-      <div id="flex">
-        <div class="icon" data-aos="fade-right">
-          <img
-            class="icons"
-            src="https://img.icons8.com/color/144/000000/html-5.png"
-          /><progress value="100" max="100"></progress>
+
+    <!-- Hero Section with Particle Animation -->
+    <section
+      id="hero"
+      style="position: relative; height: 100vh; background-color: #333"
+    >
+      <div
+        id="particles-js"
+        style="position: absolute; width: 100%; height: 100%"
+      ></div>
+      <!-- Particle Animation using Particles.js -->
+      <div
+        class="hero-content text-center"
+        style="position: relative; z-index: 10; color: white"
+      >
+        <h1 class="hero-main-text animate__animated animate__fadeInDown">
+          Hi, I'm Krishna Vamsi Dhulipalla
+        </h1>
+        <span class="typed-text"></span>
+        <a
+          href="#about"
+          class="learn btn btn-primary animate__animated animate__fadeInUp"
+          >Learn More About Me</a
+        >
+      </div>
+    </section>
+    <div class="line-background">
+      <!-- About Me Section -->
+      <section
+        id="about"
+        class="container my-5 p-5 rounded"
+        style="background-color: #f8f9fa; position: relative"
+      >
+        <div class="row align-items-center">
+          <!-- Profile Image with Hover Effect -->
+          <div class="col-md-4 text-center">
+            <img
+              src="./images/me2.jpg"
+              alt="Krishna Vamsi Dhulipalla"
+              class="img-fluid mb-4 profile-pic"
+              style="border: 4px solid #ffffff; transition: transform 0.3s ease"
+            />
+          </div>
+
+          <!-- About Text -->
+          <div class="col-md-8" id="about-text">
+            <h2 class="text-center text-md-left">About Me</h2>
+            <p>
+              I'm <strong>Krishna Vamsi Dhulipalla</strong>, a dedicated Data
+              Engineer and Machine Learning enthusiast currently pursuing my
+              MEng in Computer Science at Virginia Tech. My passion lies in
+              harnessing the power of data and AI to create intelligent,
+              scalable solutions that drive impactful change.
+            </p>
+            <p>
+              Throughout my journey in the tech world, I've channeled my
+              curiosity into solving complex challenges, from enhancing
+              cross-domain Named Entity Recognition (NER) with advanced
+              techniques like BERT and Proxy Tuning, to developing decentralized
+              video conferencing platforms using federated learning and
+              real-time data processing.
+            </p>
+            <p>
+              These projects have allowed me to refine my expertise in
+              <span class="text-highlight">Python, PyTorch, Docker,</span> and
+              <span class="text-highlight">cloud technologies</span>, enabling
+              me to build robust data pipelines and deploy AI models that
+              perform seamlessly across diverse environments.
+            </p>
+            <p>
+              Outside of the technical realm, I have a deep passion for
+              astronomy, which not only fuels my creativity but also reminds me
+              of the endless possibilities in the universe—both in space and in
+              technology.
+            </p>
+            <p>
+              I’m always eager to take on new challenges and collaborate on
+              innovative projects that push the boundaries of what’s possible in
+              data science and engineering.
+            </p>
+          </div>
         </div>
-        <div class="icon" data-aos="fade-left">
-          <img
-            class="icons"
-            src="https://img.icons8.com/color/144/000000/css3.png"
-          /><progress value="100" max="100"></progress>
+      </section>
+      <header>
+        <h2>What <span>Services</span> I'm Providing</h2>
+      </header>
+      <main>
+        <div class="content-1">
+          <div class="tiles">
+            <div style="--r: 45deg" class="tile"></div>
+            <div style="--r: 275deg" class="tile"></div>
+            <div style="--r: 190deg" class="tile"></div>
+            <div style="--r: 45deg" class="tile"></div>
+          </div>
+          <section class="section section--one">
+            <article>
+              <div class="title-wrap">
+                <h2>AI & Machine Learning Development</h2>
+              </div>
+              <hr />
+              <div class="content-wrap">
+                <p>
+                  Harnessing the power of AI and machine learning to create
+                  intelligent systems that drive innovation. I specialize in
+                  developing and fine-tuning models that deliver accurate and
+                  impactful results, whether it’s in computer vision, natural
+                  language processing, or advanced data analysis.
+                </p>
+              </div>
+            </article>
+            <article>
+              <div class="title-wrap">
+                <h2>Data Engineering</h2>
+              </div>
+              <hr />
+              <div class="content-wrap">
+                <p>
+                  From building automated ETL pipelines to conducting deep data
+                  analysis, I provide comprehensive data solutions that empower
+                  businesses to make informed decisions. My work ensures data is
+                  clean, accessible, and valuable for driving your business
+                  forward.
+                </p>
+              </div>
+            </article>
+            <article>
+              <div class="title-wrap">
+                <h2>Software Development</h2>
+              </div>
+              <hr />
+              <div class="content-wrap">
+                <p>
+                  If you need robust, scalable software solutions, I offer
+                  expertise in developing applications with a focus on AI
+                  integration, cloud technologies, and full-stack development. I
+                  build platforms that are not only functional but also
+                  cutting-edge, utilizing the latest industry trends.
+                </p>
+              </div>
+            </article>
+            <article>
+              <div class="title-wrap">
+                <h2>Profit.</h2>
+              </div>
+              <hr />
+              <div class="content-wrap">
+                <p>
+                  Similique expedita nihil beatae sunt adipisci deserunt culpa,
+                  nostrum, amet quis veritatis aperiam, ducimus repellat,
+                  assumenda atque quia dicta excepturi sint accusantium voluptas
+                  architecto. Tempore incidunt possimus aspernatur quidem,
+                  quasi!
+                </p>
+              </div>
+            </article>
+          </section>
         </div>
-        <div class="icon" data-aos="fade-right">
-          <img
-            class="icons"
-            src="https://img.icons8.com/color/144/000000/javascript.png"
-          /><progress value="100" max="100"></progress>
-        </div>
-        <div class="icon" data-aos="fade-left">
-          <img
-            class="icons"
-            src="https://img.icons8.com/color/144/000000/python.png"
-          /><progress value="85" max="100"></progress>
-        </div>
-        <div class="icon" data-aos="fade-right">
-          <img
-            class="icons"
-            src="https://img.icons8.com/officel/144/000000/php-logo.png"
-          /><progress value="75" max="100"></progress>
-        </div>
-        <div class="icon" data-aos="fade-left">
-          <img
-            class="icons"
-            src="https://img.icons8.com/bubbles/144/000000/react.png"
-          /><progress value="85" max="100"></progress>
-        </div>
-        <div class="icon" data-aos="fade-right">
-          <img
-            class="icons"
-            src="https://img.icons8.com/color/144/000000/nodejs.png"
-          /><progress value="85" max="100"></progress>
-        </div>
-        <div class="icon" data-aos="fade-left">
-          <img
-            class="icons"
-            src="https://img.icons8.com/color/144/000000/mongodb.png"
-          /><progress value="80" max="100"></progress>
+        <section class="section section--two"></section>
+        <section class="section section--three"></section>
+        <section class="section section--four"></section>
+      </main>
+      <div class="container my-5 p-5 rounded" id="experience-projects">
+        <h2 class="text-center text-md-left">Experience</h2>
+        <div class="experience-item">
+          <h3>Machine Learning Engineer <span>— HCL</span></h3>
+          <p class="experience-duration">
+            Dec. 2021 - May. 2022 | Hyderabad, India
+          </p>
+          <p>
+            At HCL, I played a pivotal role as a Machine Learning Engineer,
+            where I designed and implemented automated ETL pipelines using
+            Docker, leading to a 25% reduction in manual processing time. I
+            optimized Python-based workflows to manage large datasets,
+            increasing data availability for analysis by 30%. My
+            responsibilities also included developing Dockerized environments to
+            enable seamless model deployments and consistent testing across
+            platforms. Additionally, I integrated advanced data visualization
+            tools, which significantly improved stakeholder decision-making and
+            reduced report generation time by 15%.
+          </p>
         </div>
       </div>
-    </div>
-    <div id="projects">
-      <header class="head">PROJECTS</header>
-      <div id="pp">
-        <div class="container" data-aos="flip-left">
-          <img src="images/blood.png" class="p" alt="" /><span class="hover"
-            >Online Blood Bank</span
-          >
+      <section id="skills" class="container my-5">
+        <h2 class="text-center mb-4">My Skills</h2>
+        <div id="skillsChartContainer" style="width: 100%; height: 400px">
+          <canvas id="skillsChart"></canvas>
         </div>
-        <div class="container" data-aos="zoom-in">
-          <img
-            src="https://www.dropbox.com/s/cylnu1zd65wdsp6/mountains.jpeg?raw=1"
-            class="p"
-            alt=""
-          /><span class="hover">Music Player</span>
-        </div>
-        <div class="container" data-aos="zoom-in">
-          <img
-            src="https://www.dropbox.com/s/elzd2yb6pjh9zru/owl.jpeg?raw=1"
-            class="p"
-            alt=""
-          /><span class="hover">Coffee Maker clone</span>
-        </div>
-        <div class="container" data-aos="flip-right">
-          <img
-            src="https://www.dropbox.com/s/y5ss4dt8nn3uqqw/music%20player.jpeg?raw=1"
-            class="p"
-            alt=""
-          /><span class="hover">Mountains clone</span>
-        </div>
-        <div class="container" data-aos="flip-left">
-          <img
-            src="https://www.dropbox.com/s/t6yzxwmxhfq3yza/coffee.jpeg?raw=1"
-            class="p"
-            alt=""
-          /><span class="hover">Owl clone</span>
-        </div>
-        <div class="container" data-aos="flip-right">
-          <img src="images/random.png" class="p" alt="" /><span class="hover"
-            >Random XKCD</span
-          >
-        </div>
-      </div>
-    </div>
-    <div id="contact">
-      <header class="head">Contact Me</header>
-      <div id="f">
-        <form onsubmit="norefresh(); return false;">
-          <label for="name">Name :</label>
-          <input
-            name="name"
-            class="input-control"
-            type="text"
-            placeholder="Name"
-          /><br />
-          <label for="email">Email :</label>
-          <input
-            name="email"
-            class="input-control"
-            type="email"
-            placeholder="Email"
-          /><br />
-          <label for="subject">Subject :</label>
-          <input
-            class="input-control"
-            type="text"
-            placeholder="subject"
-            name="Subject"
-          /><br />
-          <textarea
-            class="input-control"
-            name="msg"
-            id="msg"
-            cols="30"
-            rows="10"
-            placeholder="Message"
-          ></textarea>
-          <input type="submit" value="submit" class="btn" /><br />
-          <div style="text-align: center">
-            <span style="font-size: 1.3em">Get In Touch</span>
-            <div style="margin-top: 1em">
-              <img src="https://img.icons8.com/color/48/000000/whatsapp.png" />
-              <img
-                src="https://img.icons8.com/color/48/000000/facebook-new.png"
-              />
-              <img src="https://img.icons8.com/color/48/000000/twitter.png" />
-              <img
-                src="https://img.icons8.com/ios-filled/48/000000/github.png"
-              />
+        <div id="skillsCategories" class="skills-container mt-4">
+          <div class="skills-category">
+            <h3>Programming & Web</h3>
+            <div class="skills-content">
+              <span>Python</span>
+              <span>JavaScript</span>
+              <span>TypeScript</span>
+              <span>ReactJS</span>
+              <span>NodeJS</span>
+              <span>Flask</span>
+              <span>REST APIs</span>
+              <span>MongoDB</span>
+              <span>MySQL</span>
+              <span>AngularJS</span>
+              <span>Django</span>
+              <span>Bootstrap</span>
+              <span>Tailwind CSS</span>
             </div>
           </div>
-        </form>
-      </div>
+          <div class="skills-category">
+            <h3>Machine Learning/AI</h3>
+            <div class="skills-content">
+              <span>PyTorch</span>
+              <span>TensorFlow</span>
+              <span>BERT</span>
+              <span>Transformers</span>
+              <span>NER</span>
+              <span>Sentimental Analysis</span>
+              <span>Transfer Learning</span>
+              <span>Self-Supervised Learning</span>
+              <span>Federated Learning</span>
+              <span>Scikit-Learn</span>
+              <span>YOLO for Object Detection</span>
+              <span>Computer Vision (ResNet, VGG, GAN)</span>
+              <span>NLP</span>
+              <span>Word Embeddings</span>
+              <span>Topic Modeling</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h3>Data Analysis</h3>
+            <div class="skills-content">
+              <span>Pandas</span>
+              <span>Tableau</span>
+              <span>D3.js</span>
+              <span>Data Wrangler</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h3>Cloud & DevOps</h3>
+            <div class="skills-content">
+              <span>WebRTC</span>
+              <span>AWS</span>
+              <span>Docker</span>
+              <span>Git</span>
+              <span>Azure</span>
+              <span>Apache Spark</span>
+              <span>Postgres</span>
+              <span>Apache Kafka</span>
+              <span>Apache Airflow</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    <script>
-      $(window).on("load", function () {
-        $("#loader").hide();
-        $(".close").click(function () {
-          $("#u").toggleClass("over");
-        });
-      });
-    </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 800,
-      });
-    </script>
+    <!-- Footer -->
+    <footer class="text-center py-4">
+      <p>&copy; 2024 Krishna Vamsi Dhulipalla. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
