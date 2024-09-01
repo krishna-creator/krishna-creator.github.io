@@ -124,6 +124,7 @@ canvas:hover {
 }
 
 #skillsChart {
+  background: rgba(255, 255, 255, 0.5);
   width: 100%;
   font-size: 2rem;
 }

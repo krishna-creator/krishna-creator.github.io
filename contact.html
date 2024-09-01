@@ -22,6 +22,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" href="CSS/about.css" />
+    <link rel="stylesheet" href="CSS/contact.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -59,34 +60,48 @@
       </div>
     </nav>
     <!-- Contact Form Section -->
-    <section id="contact" class="container my-5">
-      <div id="vanta-bg"></div>
-      <h2 class="text-center">Contact Me</h2>
-      <p class="text-center">
-        If you want to discuss a project or just want to say hi, feel free to
-        contact me!
-      </p>
-      <form class="contact-form mx-auto" style="max-width: 600px">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" required />
+    <div class="form-container">
+      <h1>Contact Form</h1>
+      <form id="nn-contact-form">
+        <div class="layer input-layer">
+          <label for="name">Input Layer: Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" />
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" required />
+        <div class="layer hidden-layer">
+          <label for="email">Hidden Layer 1: Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+          />
         </div>
-        <div class="form-group">
-          <label for="message">Message</label>
+        <div class="layer hidden-layer">
+          <label for="message">Hidden Layer 2: Message</label>
           <textarea
-            class="form-control"
             id="message"
-            rows="5"
-            required
+            name="message"
+            placeholder="Your Message"
           ></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <div class="loss-message hidden" id="loss-message">
+          Loss function not minimized! Please fill out all fields.
+        </div>
+        <div class="layer output-layer">
+          <button type="submit" id="submit-btn">
+            Output Layer: Submit Prediction
+          </button>
+        </div>
       </form>
-    </section>
+      <div id="training-animation" class="hidden">
+        <p>Training the Neural Network...</p>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <p id="epoch-counter">Epoch: 0</p>
+      </div>
+    </div>
+    <script src="contact_script.js"></script>
 
     <!-- JavaScript Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
@@ -98,6 +113,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="script.js"></script>
   </body>
 </html>

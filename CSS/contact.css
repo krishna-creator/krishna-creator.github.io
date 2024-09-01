@@ -1,0 +1,94 @@
+/* styles.css */
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+} */
+
+.form-container {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+  margin: 8rem auto;
+}
+
+h1 {
+  margin-bottom: 1em;
+  color: #0073e6;
+}
+
+.layer {
+  margin-bottom: 1.5em;
+}
+
+.layer label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #555;
+}
+
+.layer input,
+.layer textarea {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.layer button {
+  padding: 0.75em 1.5em;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.layer button:hover {
+  background-color: #005bb5;
+}
+
+#training-animation {
+  margin-top: 2em;
+}
+
+.hidden {
+  display: none;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.5em;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: #0073e6;
+}
+
+#epoch-counter {
+  font-size: 0.9em;
+  color: #0073e6;
+}
+
+.loss-message {
+  color: #d32f2f;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
