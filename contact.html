@@ -62,10 +62,20 @@
     <!-- Contact Form Section -->
     <div class="form-container">
       <h1>Contact Form</h1>
-      <form id="nn-contact-form">
+      <form
+        id="nn-contact-form"
+        action="https://formspree.io/f/mzzpwpkj"
+        method="POST"
+      >
         <div class="layer input-layer">
           <label for="name">Input Layer: Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            autocomplete="name"
+          />
         </div>
         <div class="layer hidden-layer">
           <label for="email">Hidden Layer 1: Email</label>
@@ -74,6 +84,7 @@
             id="email"
             name="email"
             placeholder="Your Email"
+            autocomplete="email"
           />
         </div>
         <div class="layer hidden-layer">
