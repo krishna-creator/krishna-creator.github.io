@@ -197,3 +197,14 @@ canvas:hover {
   font-size: 28px;
   margin-bottom: 20px;
 }
+
+.resume-button {
+  border-radius: 0.25rem; /* Rounded corners for button */
+  padding: 0.5rem 1rem; /* Add some padding */
+  color: #333; /* Dark text color for contrast */
+  font-weight: 500; /* Slightly bolder text */
+}
+
+.resume-button:hover {
+  background-color: #e9ecef; /* Light grey background on hover */
+}
