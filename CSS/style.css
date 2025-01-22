@@ -208,3 +208,91 @@ canvas:hover {
 .resume-button:hover {
   background-color: #e9ecef; /* Light grey background on hover */
 }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.section__subtitle {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.qualification__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.qualification__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.qualification__tab {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.qualification__tab.active,
+.qualification__tab:hover {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.qualification__sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qualification__content {
+  display: none;
+}
+
+.qualification__content-active {
+  display: block;
+}
+
+.qualification__data {
+  margin-bottom: 1.5rem;
+}
+
+.qualification__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.qualification__subtitle {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.qualification__calendar {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
+.uil-calendar-alt {
+  margin-right: 0.5rem;
+}

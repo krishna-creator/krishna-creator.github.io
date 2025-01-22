@@ -28,44 +28,54 @@
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" href="CSS/about.css" />
     <link rel="stylesheet" href="CSS/products.css" />
-    <meta name="google-site-verification" content="qCeAap7TkXSuUZxvLUJ4y7XeuWX39M39Eo62k3zbyuE" />
+    <meta
+      name="google-site-verification"
+      content="qCeAap7TkXSuUZxvLUJ4y7XeuWX39M39Eo62k3zbyuE"
+    />
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">KVD</a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNav"
-    aria-controls="navbarNav"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="experience.html">Portfolio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
-      </li>
-      <li class="nav-item">
-        <a style = "color: black;
-    padding: 0.3rem;
-    margin-left: 1rem;
-    margin-top: 0.2rem;" class="btn btn-light nav-link resume-button" href="https://drive.google.com/file/d/1ESQlbE9cl6MuGPgfpEaM0UJlVMI79AZz/view?usp=sharing" target="_blank">Resume</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
+      <a class="navbar-brand" href="#">KVD</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="experience.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a
+              style="
+                color: black;
+                padding: 0.3rem;
+                margin-left: 1rem;
+                margin-top: 0.2rem;
+              "
+              class="btn btn-light nav-link resume-button"
+              href="https://drive.google.com/file/d/1sKSHgBttqI5hbsBaKfC1nR0bvn37f7yl/view?usp=sharing"
+              target="_blank"
+              >Resume</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- Hero Section with Particle Animation -->
     <section
@@ -232,60 +242,69 @@
         <section class="section section--three"></section>
         <section class="section section--four"></section>
       </main>
-      <div class="container my-5 p-5 rounded" id="experience-projects">
-        <h2 class="text-center text-md-left">Experience</h2>
-        <div class="experience-item">
-          <h3>Data Engineer <span>- HCL Technologies</span></h3>
-          <p class="experience-duration">
-            Dec. 2021 - May. 2022 | Hyderabad, India
-          </p>
-          <p style="margin-top: 0.5rem">
-            At HCL Technologies, I played a crucial role as a Data Engineer,
-            focusing on streamlining and automating data workflows to enhance
-            efficiency. I led the design and implementation of automated ETL
-            pipelines using Docker and Apache Airflow, which resulted in a 25%
-            reduction in manual processing time, enabling the team to prioritize
-            strategic initiatives.
-          </p>
-          <p>
-            I also optimized Python-based workflows for large-scale data
-            processing, boosting data availability for analysis by 30%. My work
-            ensured consistent and accurate model deployments, significantly
-            improving testing environments through Docker's capabilities.
-          </p>
-          <p>
-            Additionally, I integrated advanced data visualization tools like
-            Tableau and D3.js, leading to faster, data-driven decisions and a
-            15% reduction in report generation time. My experience at HCL
-            solidified my expertise in data engineering, where I consistently
-            applied the latest technologies to deliver impactful results.
-          </p>
-          <h3 style="margin-top: 1rem">
-            Freelance Web Developer <span></span>
-          </h3>
-
-          <p>
-            As a Freelance Web Developer, I delivered tailored solutions for a
-            variety of clients, specializing in responsive WordPress sites for
-            PBmedia. My work not only enhanced the user experience but also
-            improved site performance and SEO, driving a 20% increase in
-            traffic.
-          </p>
-          <p>
-            In addition to WordPress development, I leveraged the MERN stack
-            (MongoDB, Express.js, React, Node.js) to create interactive web
-            applications that met diverse client needs. One of my key projects
-            involved building a custom eCommerce platform with real-time
-            inventory management and a secure payment gateway, resulting in a
-            35% boost in client sales.
-          </p>
-          <p>
-            This freelance experience honed my ability to manage multiple
-            projects and exceed client expectations through innovative and
-            scalable web solutions.
-          </p>
+      <section class="qualification section">
+        <h2 class="section__title">Qualification</h2>
+        <span class="section__subtitle">My personal journey</span>
+        <div class="qualification__container container">
+          <div class="qualification__tabs">
+            <div class="qualification__tab active" onclick="toggleTab(1)">
+              Education
+            </div>
+            <div class="qualification__tab" onclick="toggleTab(2)">
+              Experience
+            </div>
+          </div>
+          <div class="qualification__sections">
+            <div
+              class="qualification__content qualification__content-active"
+              id="content1"
+            >
+              <!-- Education Content -->
+              <div class="qualification__data">
+                <h3 class="qualification__title">M.S in Computer Science</h3>
+                <span class="qualification__subtitle">Virginia Tech</span>
+                <div class="qualification__calendar">
+                  <i class="uil uil-calendar-alt"></i> 2023 - 2024
+                </div>
+              </div>
+              <div class="qualification__data">
+                <h3 class="qualification__title">B.Tech in Computer Science</h3>
+                <span class="qualification__subtitle">Vel Tech University</span>
+                <div class="qualification__calendar">
+                  <i class="uil uil-calendar-alt"></i> 2018 - 2022
+                </div>
+              </div>
+            </div>
+            <div class="qualification__content" id="content2">
+              <!-- Experience Content -->
+              <div class="qualification__data">
+                <h3 class="qualification__title">Data Scientist</h3>
+                <span class="qualification__subtitle">Virginia Tech</span>
+                <div class="qualification__calendar">
+                  <i class="uil uil-calendar-alt"></i> June. 2024 - Present
+                </div>
+              </div>
+              <div class="qualification__data">
+                <h3 class="qualification__title">
+                  Graduate Research Assistant
+                </h3>
+                <span class="qualification__subtitle">Virginia Tech</span>
+                <div class="qualification__calendar">
+                  <i class="uil uil-calendar-alt"></i> June. 2023 - May. 2024
+                </div>
+              </div>
+              <div class="qualification__data">
+                <h3 class="qualification__title">Data Engineer</h3>
+                <span class="qualification__subtitle">UJR Technologies</span>
+                <div class="qualification__calendar">
+                  <i class="uil uil-calendar-alt"></i> Jul. 2021 - Dec. 2022
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
       <section id="skills" class="container my-5">
         <h2 class="text-center mb-4">My Skills</h2>
         <div id="skillsChartContainer" style="width: 100%; height: 400px">
@@ -374,5 +393,19 @@
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
     <script src="script.js"></script>
+    <script>
+      function toggleTab(index) {
+        const tabs = document.querySelectorAll(".qualification__tab");
+        const contents = document.querySelectorAll(".qualification__content");
+
+        tabs.forEach((tab) => tab.classList.remove("active"));
+        contents.forEach((content) =>
+          content.classList.remove("qualification__content-active")
+        );
+
+        tabs[index - 1].classList.add("active");
+        contents[index - 1].classList.add("qualification__content-active");
+      }
+    </script>
   </body>
 </html>
